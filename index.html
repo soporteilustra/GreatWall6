@@ -13,13 +13,16 @@
   </head>
   <body>
 
-    <header class="content">
+    <header id="tophead" class="content">
       <div class="container">
         <div class="row flex-items-xs-middle">
           <div class="col-xs-4">
             <img src="assets/media/logo1.jpg" alt="">
           </div>
-          <div class="col-xs-8 text-xs-right">
+          <div class="text-xs-right col-xs-8 hidden-lg-up">
+            <button id="menu" class="btn btn-info" type="button" name="button"><i class="fa fa-bars"></i></button>
+          </div>
+          <div id="nav-menu" class="col-xs-12 col-lg-8 text-xs-right">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">Inicio</li>
               <li class="list-inline-item">Características</li>
@@ -39,17 +42,29 @@
       <div class="back">
         <img class="bg-cover" src="assets/media/cover.jpg" alt="Great Wall 6">
       </div>
-      <div class="desc-g">
+      <div class="desc-g hidden-sm-down">
         <h5>Nueva</h5>
         <h1>Great Wall 6</h1>
-        <h4>Desde $13,990</h4>
+        <h4 class="text-danger">Desde $13,990</h4>
         </ul>
       </div>
-      <div class="socials-g">
+      <!--<div class="socials-g">
         <ul class="list-unstyled list-inline">
           <li class="list-inline-item"><a href="#"><img src="assets/media/face.png" alt="facebook"></a></li>
           <li class="list-inline-item"><a href="#"><img src="assets/media/instam.png" alt="instagram"></a></li>
         </ul>
+      </div>-->
+    </section>
+    <section class="container-fluid hidden-md-up">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="desc-g">
+            <h5>Nueva</h5>
+            <h1>Great Wall 6</h1>
+            <h4 class="text-danger">Desde $13,990</h4>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section id="features" class="content">
@@ -117,37 +132,37 @@
           </div>
           <div class="col-xs-12 local-list text-xs-center">
             <ul class="list-unstyled list-inline">
-              <li class="list-inline-item active">Lima</li>
-              <li class="list-inline-item">Arequipa</li>
-              <li class="list-inline-item">Cajamarca</li>
-              <li class="list-inline-item">Lambayeque</li>
-              <li class="list-inline-item">Ica</li>
-              <li class="list-inline-item">Cuzco</li>
-              <li class="list-inline-item">Huancayo</li>
-              <li class="list-inline-item">Huánuco</li>
-              <li class="list-inline-item">Ancash</li>
-              <li class="list-inline-item">Piura</li>
-              <li class="list-inline-item">Puno</li>
-              <li class="list-inline-item">Ucayali</li>
-              <li class="list-inline-item">Tacna</li>
-              <li class="list-inline-item">San Martin</li>
-              <li class="list-inline-item">La Libertad</li>
-              <li class="list-inline-item">Chimbote</li>
+              <li id="1"class="place-clickable list-inline-item active">Lima</li>
+              <li id="2"class="place-clickable list-inline-item">Arequipa</li>
+              <li id="3"class="place-clickable list-inline-item">Cajamarca</li>
+              <li id="4"class="place-clickable list-inline-item">Lambayeque</li>
+              <li id="5"class="place-clickable list-inline-item">Ica</li>
+              <li id="6"class="place-clickable list-inline-item">Cuzco</li>
+              <li id="7"class="place-clickable list-inline-item">Huancayo</li>
+              <li id="8"class="place-clickable list-inline-item">Huánuco</li>
+              <li id="9"class="place-clickable list-inline-item">Ancash</li>
+              <li id="10"class="place-clickable list-inline-item">Piura</li>
+              <li id="11"class="place-clickable list-inline-item">Puno</li>
+              <li id="12"class="place-clickable list-inline-item">Ucayali</li>
+              <li id="13"class="place-clickable list-inline-item">Tacna</li>
+              <li id="14"class="place-clickable list-inline-item">San Martin</li>
+              <li id="15"class="place-clickable list-inline-item">La Libertad</li>
+              <li id="16"class="place-clickable list-inline-item">Chimbote</li>
             </ul>
           </div>
           <div class="locations col-xs-12">
             <div class="row">
-              <div class="graph-local col-md-6 hidden-md-down">
+              <div class="graph-local col-md-5 hidden-md-down">
                 <img class="bg-graph" src="assets/media/mapa.png" alt="mapa locations">
                 <div class="marker">
                   <i class="fa fa-map-marker"></i>
                 </div>
               </div>
-              <div class="locations-table col-lg-6">
+              <div class="locations-table col-lg-7">
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th colspan="3" class="text-xs-center text-uppercase text-danger">Lima</th>
+                      <th id="conce-name" colspan="3" class="text-xs-center text-uppercase text-danger">Lima</th>
                     </tr>
                     <tr>
                       <th>#</th>
@@ -155,13 +170,48 @@
                       <th>Dirección</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Surco</td>
-                      <td>Av. Mariscal La Mar 832</td>
-                    </tr>
-                  </tbody>
+                    <tbody id="address">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>SURCO</td>
+                        <td>Av. Cristóbal de Peralta Norte 1000, Santiago de Surco 713-5004</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>SURCO</td>
+                        <td>C.C. Jockey Plaza - Exhibición Exterior puerta 3, Santiago de Surco 435-9260</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>SAN ISIDRO</td>
+                        <td>Av. República de Panamá 3671, San Isidro 713-5046  /  713-5179  /  713-5121  /  713-5117</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>SAN MIGUEL</td>
+                        <td>Av. La Marina Cdra. 23, San Miguel 578-5080</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>MALL LIMA PLAZA NORTE</td>
+                        <td>C.C. Lima Plaza Norte - Exhibición interior 535-2013</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>LA VICTORIA</td>
+                        <td>Av. Javier Prado Este 1095, La Victoria 625-1237</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>ATE</td>
+                        <td>Av. Separadora Industrial con Vía Evitamiento, al costado del peaje 713-5323</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>SAN JUAN MIRAFLORES</td>
+                        <td>C.C. Mall del Sur Exhibición Interior ( Expomotor)</td>
+                      </tr>
+                    </tbody>
                 </table>
               </div>
             </div>
@@ -200,43 +250,43 @@
             </div>
           </div>
           <div class="form col-xs-12 col-md-6">
-            <form class="" action="index.html" method="post">
+            <form class="" action="logic/sendmail.php" method="post">
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="Nombres completos">
+                  <input class="form-control" type="text" name="name" value="" placeholder="Nombres completos">
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="Empresa">
+                  <input class="form-control" type="text" name="enterprise" value="" placeholder="Empresa">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="input-group col-md-6">
                   <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="Ciudad" >
+                  <input class="form-control" type="text" name="city" value="" placeholder="Ciudad" >
                 </div>
                 <div class="input-group col-md-6">
                   <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="Distrito">
+                  <input class="form-control" type="text" name="district" value="" placeholder="Distrito">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="input-group col-md-6">
                   <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="Teléfono">
+                  <input class="form-control" type="text" name="phone" value="" placeholder="Teléfono">
                 </div>
                 <div class="input-group col-md-6">
                   <span class="input-group-addon"><i class="fa fa-at"></i></span>
-                  <input class="form-control" type="text" name="" value="" placeholder="E-mail">
+                  <input class="form-control" type="text" name="email" value="" placeholder="E-mail">
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-commenting-o"></i></span>
-                  <textarea class="form-control"name="name" rows="8" cols="80" placeholder="Escribe aquí tu consulta"></textarea>
+                  <textarea class="form-control"name="message" rows="8" cols="80" placeholder="Escribe aquí tu consulta"></textarea>
                 </div>
               </div>
               <button class="btn btn-lg pull-xs-right btn-outline-danger" type="submit" name="button">Cotizar</button>
@@ -265,5 +315,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js" charset="utf-8"></script>
+    <script src="assets/js/logic.js" charset="utf-8"></script>
   </body>
 </html>
